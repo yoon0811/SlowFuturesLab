@@ -17,11 +17,3 @@
 // var c = a * b;
 
 
-
-//step 19. x라는 변수를 선언하고 값 20을 할당합니다.
-let x = 20;
-let multi = x*5;
-console.log(multi);
-
-let name = 'Hyeyoon Jeong'
-console.error(`Hello ${name}, welcome to the JavaScript class!`)
