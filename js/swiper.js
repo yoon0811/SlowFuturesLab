@@ -1,11 +1,101 @@
-var swiper = new Swiper(".swiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  // direction: 'vertical',
+  loop: true,
+
+  centeredSlides: true,
+
+  // Per View
+  slidesPerView: 5,
+  spaceBetween: 15,
+
+  // If we need pagination
+  pagination: { el: ".swiper-pagination", clickable: true },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+
+
+  // 성능 최적화 옵션
+  observer: true,
+  observeParents: true,
+  watchOverflow: true,
+  preloadImages: false,
+  lazy: { loadPrevNext: true, loadPrevNextAmount: 1 },
+  speed: 600,
+  watchSlidesProgress: true,
+
+
 });
+
+
+
+
+
+
+// jQuery(document).ready(function ($) {
+//   // Swiper가 로드되어 있고 타겟이 있을 때만 초기화 (중복 초기화 방지)
+//   const $visual = $(".swiper");
+//   let swiper = null;
+
+//   if (typeof Swiper !== "undefined" && $visual.length) {
+//     // Swiper가 이미 초기화 되어 있으면 재초기화 방지
+//     if ($visual.hasClass("swiper-initialized")) {
+//       swiper = $visual[0].swiper || null;
+//     } else {
+//       // Swiper 인스턴스 생성
+//       swiper = new Swiper(".swiper", {
+//         direction: "horizontal",
+//         loop: true,
+//         centeredSlides: true,
+//         slidesPerView: "auto",
+//         spaceBetween: 30,
+//         autoplay: { delay: 2500, disableOnInteraction: false },
+//         navigation: {
+//           nextEl: ".swiper-button-next",
+//           prevEl: ".swiper-button-prev",
+//         },
+
+
+
+//         // 커스텀 fraction 업데이트 이벤트
+//         on: {
+//           init: function () {
+//             updateFraction(this);
+//           },
+//           slideChange: function () {
+//             updateFraction(this);
+//           },
+//         },
+//       });
+//     } // if-else
+
+// 커스텀 fraction 업데이트 함수
+function updateFraction(swiper) {
+  // loop 옵션이 true일 때만 loopedSlides를 고려
+  if (swiper.params.loop) {
+    const current = swiper.realIndex + 1;
+    const total = swiper.slides.length - (swiper.loopedSlides * 2);
+    $(".custom-fraction .current").text(current);
+    $(".custom-fraction .total").text(total);
+  } else {
+    // loop가 false일 때는 단순히 activeIndex + 1과 전체 슬라이드 수
+    const current = swiper.activeIndex + 1;
+    const total = swiper.slides.length;
+    $(".custom-fraction .current").text(current);
+    $(".custom-fraction .total").text(total);
+  }
+}
+
+
 
 // /**
 //  * Swiper 6.0.4

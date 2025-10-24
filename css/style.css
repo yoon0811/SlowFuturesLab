@@ -17,6 +17,10 @@
     margin: 0px auto;
   }
 
+  body.content-wrap {
+    width: 80%;
+  }
+
   a {
     text-decoration: none;
   }
@@ -58,7 +62,7 @@
   }
 
 
-  .menu_on {
+  .menu_active {
     color: #fff !important;
     background-color: rgba(0, 0, 0, 0.9);
   }
@@ -221,6 +225,12 @@
 
 
   /* swiper */
+
+  .swiper {
+    width: 100%;
+  }
+
+
   .swiper-wrapper {
     height: 125px;
   }
@@ -228,8 +238,8 @@
   .swiper-slide {
     overflow: hidden;
     object-fit: cover;
-    /* height: 125px;
-    width: 125px; */
+    height: 125px;
+    width: 125px;
     border: 2px solid #fff;
   }
 
@@ -250,25 +260,33 @@
   }
 
 
-  .article_head {
-    font-family: 'Garamond';
-    text-align: center;
-    margin: 40px 0 70px 0;
+  section.section-article {
+    margin-top: 40px;
   }
 
   h2 {
-    margin: 0;
-    margin-bottom: 30px;
+    font-family: var(--font-acsent);
+    text-align: center;
+    margin-bottom: 70px;
     font-size: 60px;
     width: 100%;
-    font-weight: normal;
   }
 
-  .article_head>span {
+  section.section-article p.author {
     font-size: 16px;
+    text-align: center;
   }
 
-  article>p {
+  .section-article>article {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-article>article>img {
+    width: 100%;
+  }
+
+  .section-article article>p {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 80px;
@@ -306,7 +324,7 @@
     font-size: 18px;
     background: #fff;
     /* Center slide text vertically */
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -317,7 +335,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
-  align-items: center;
+  align-items: center; */
 }
 
 */ @media (min-width: 500px) {
@@ -373,18 +391,19 @@
   .swiper-slide>a>img {
     width: 100%;
   }
+  */
 
-  .swiper-wrapper .swiper-slide a {
-    opacity: 0.8;
-    filter: grayscale(0.8);
-  }
+.swiper-wrapper .swiper-slide a {
+  opacity: 0.8;
+  filter: grayscale(0.8);
+}
 
 
-  .swiper-wrapper .swiper-slide a.slide_active {
-    border: 2px solid var(--primary-color) !important;
-    opacity: 1;
-    filter: grayscale(0);
-  } */
+.swiper-wrapper .swiper-slide a.slide_active {
+  border: 2px solid var(--primary-color) !important;
+  opacity: 1;
+  filter: grayscale(0);
+}
 
 /*** Work ***/
 .pswp__caption__center>p {
@@ -781,6 +800,10 @@ h5 {
     }
 
     /* ARTICLES */
+
+
+
+
     /* .swiper-slide>a {
       display: block;
       overflow: hidden;
@@ -1356,3 +1379,165 @@ h5 {
   .swiper-scrollbar {
     background: rgba(130, 130, 130, 0.1) !important;
   } */
+
+
+
+
+
+
+    /*********
+visual-swiper
+hero section용
+*/
+    .visual-section {
+      --visual-swiper-width: 100%;
+      margin-bottom: 120px;
+    }
+
+    /* @media (min-width: 1024px) {
+    #contents.ub-style .visual-section  {
+        max-width: none;
+        width: 100%;
+    }
+} */
+    /* html에서 #contents class="ub-style" */
+
+
+
+    .swiper .swiper-slide {}
+
+
+    /* 
+ub-swiper
+1. navigation 이미지 변경
+2. pagination 색상변경
+ */
+    .swiper .swiper-button-prev,
+    .swiper .swiper-button-next {
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+    }
+
+
+
+
+    .swiper .swiper-pagination {
+      left: 0;
+      bottom: 1rem;
+      width: 100%;
+    }
+
+    .swiper .swiper-pagination-bullet {
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    .swiper .swiper-pagination-bullet-active {
+      opacity: 1;
+      background: transparent;
+      border: 4px solid var(--primary-color);
+    }
+
+    /*******
+swiper controls가 슬라이드 아래 표시
+ */
+    .swiper.swiper-controls-bottom {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .swiper.swiper-controls-bottom .swiper-wrapper {
+      /*하단에 정렬*/
+      /* align-items: end;   */
+
+      /* 슬라이드 .swiper-wrapper 기준 세로 가운데 */
+      align-items: center;
+      /* gap:20px; */
+
+    }
+
+    .swiper.swiper-controls-bottom .swiper-slide {
+      width: 100% !important;
+      transform: scale(1);
+      /*슬라이드를 하단에 정렬할 때는 transform-origin*/
+      /* transform-origin: center bottom;  */
+
+      /*슬라이드를 가운데에 정렬할 때는 transform-origin*/
+      transform-origin: center center;
+    }
+
+    .swiper.swiper-controls-bottom .swiper-slide-active {
+      transform: scale(1);
+    }
+
+    .swiper.ub-swiper-controls-bottom .swiper-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      box-sizing: border-box;
+      padding: 0.5rem 0;
+    }
+
+    /* flex item */
+    .swiper.swiper-controls-bottom .swiper-controls>div {
+      position: static;
+      box-sizing: border-box;
+
+    }
+
+    .ub-swiper.ub-swiper-controls-bottom .ub-swiper-controls .swiper-scrollbar {
+      order: 1;
+      width: 100%;
+      height: 4px;
+    }
+
+    .ub-swiper.ub-swiper-controls-bottom .swiper-pagination-fraction {
+      order: 2;
+      width: auto;
+
+      display: flex;
+      gap: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .ub-swiper.ub-swiper-controls-bottom .swiper-button-next,
+    .ub-swiper.ub-swiper-controls-bottom .swiper-button-prev {
+      width: 24px;
+      height: 24px;
+      margin-top: 0;
+    }
+
+    .swiper.ub-swiper-controls-bottom .swiper-button-prev {
+      order: 3;
+      background-position: 4px center;
+      margin-left: 30px;
+
+    }
+
+    .swiper.ub-swiper-controls-bottom .swiper-button-next {
+      order: 5;
+      /* margin-left: -1.2rem; */
+    }
+
+    /* progressbar와 fraction을 함께 쓰는 방법 */
+
+    /* progressbar 스타일링 */
+    .swiper.swiper-controls-bottom .swiper-pagination-progressbar {
+      width: 100%;
+      max-width: 85%;
+      height: 2px;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .ub-swiper.ub-swiper-controls-bottom .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+      background: var(--primary-color);
+    }
+
+    /* 별도로 현재 페이지 번호 표시 */
+    .swiper.swiper-controls-bottom .custom-fraction {
+      order: 4;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
