@@ -1,3 +1,12 @@
+var swiper = new Swiper(".swiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
 // /**
 //  * Swiper 6.0.4
 //  * Most modern mobile touch slider and framework with hardware accelerated transitions
