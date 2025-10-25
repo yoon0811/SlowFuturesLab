@@ -194,7 +194,6 @@ header .header-wrap .logo img {
 header .top-menu-nav>ul {
   display: flex;
   justify-content: center;
-  margin-bottom: 60px;
   gap: 20px;
 }
 
@@ -224,7 +223,7 @@ header .top-menu-nav>ul li a {
 /* swiper */
 
 .article-swiper {
-  width: 70%;
+  width: 80%;
   overflow: hidden;
   margin-top: 80px;
 }

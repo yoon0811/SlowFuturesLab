@@ -4,7 +4,7 @@ const swiper = new Swiper('.swiper', {
   loop: true,
   centeredSlides: true,
   slidesPerView: "auto",
-  spaceBetween: 10,
+  spaceBetween: 6,
   pagination: { el: ".swiper-pagination", type: "fraction", clickable: true },
   navigation: {
     nextEl: ".swiper-button-next",
