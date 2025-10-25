@@ -1,0 +1,101 @@
+/* 
+.video-wrap {position:relative; padding-bottom:56.25%; padding-top:0px; height:0; overflow:hidden;}
+.video-wrap iframe,
+.video-wrap object,
+.video-wrap embed {position:absolute; top:0; left:0; width:100%; height:100%;} */
+
+
+/* .swiper-wrapper {}
+
+  .swiper-container-horizontal>.swiper-scrollbar {
+    height: 7px !important;
+    ;
+  }
+
+
+  .swiper-scrollbar-drag {
+    background: rgba(0, 0, 0, .8) !important;
+    border-radius: 4px !important;
+  }
+
+  .swiper-scrollbar {
+    background: rgba(130, 130, 130, 0.1) !important;
+  } */
+
+
+
+
+
+
+/* @media (min-width: 1024px) {
+    #contents.ub-style .visual-section  {
+        max-width: none;
+        width: 100%;
+    }
+} */
+/* html에서 #contents class="ub-style" */
+
+/* 
+ub-swiper
+1. navigation 이미지 변경
+2. pagination 색상변경
+ */
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+}
+
+
+
+
+.swiper .swiper-pagination {
+  left: 0;
+  bottom: 1rem;
+  width: 100%;
+}
+
+/*******
+swiper controls가 슬라이드 아래 표시
+ */
+.swiper .swiper-controls {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.swiper .swiper-controls .swiper-wrapper {
+  /*하단에 정렬*/
+  /* align-items: end;   */
+
+  /* 슬라이드 .swiper-wrapper 기준 세로 가운데 */
+  align-items: center;
+  /* gap:20px; */
+
+}
+
+.swiper .swiper-controls .swiper-slide {
+  width: 100% !important;
+  transform: scale(1);
+  /*슬라이드를 하단에 정렬할 때는 transform-origin*/
+  /* transform-origin: center bottom;  */
+
+  /*슬라이드를 가운데에 정렬할 때는 transform-origin*/
+  transform-origin: center center;
+}
+
+.swiper .swiper-controls .swiper-slide-active {
+  transform: scale(1);
+}
+
+
+.swiper .swiper-controls .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: var(--primary-color);
+}
+
+/* 별도로 현재 페이지 번호 표시 */
+.swiper.swiper-controls .custom-fraction {
+  order: 4;
+  font-size: 1rem;
+  white-space: nowrap;
+}

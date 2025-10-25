@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="main" />
     <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
     <!--   <link rel="stylesheet" media="screen" href="css/reset.css">  -->
-    <link rel="stylesheet" media="screen" href="../css/style.css">
-    <title>Slow Futures Lab</title>
+    <link rel="stylesheet" media="screen" href="/asset/css/style.css">
+    <title>Slow Futures Lab_article02</title>
 </head>
 
 <body>
     <div class="content-wrap">
         <header>
             <div class="header-wrap">
-                <h1 class=logo><a href="../index.html"><img src="../img/logo.png" alt="SFL Home" /></a></h1>
+                <h1 class=logo><a href="../index.html"><img src="/asset/img/logo.png" alt="SFL Home" /></a></h1>
                 <nav class="top-menu-nav">
                     <ul>
-                        <li><a class="menu_on" href="articles/a02.html">Articles</a></li>
+                        <li><a class="menu_active" href="a06.html">Articles</a></li>
                         <li><a href="../works.html">Works</a></li>
                         <li><a href="../about.html">About</a></li>
                     </ul>
@@ -28,28 +31,45 @@
         </header>
 
         <!-- image slide -->
-        <div class="slider">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="a06.html"><img src="../img/art_thum/thumnail_6.jpeg"
-                                alt="article 06" /></a></div>
-                    <div class="swiper-slide"><a href="a05.html"><img src="../img/art_thum/thumnail_5.png"
-                                alt="article0 05" /></a></div>
-                    <div class="swiper-slide"><a href="a04.html"><img src="../img/art_thum/thumnail_4.jpg"
-                                alt="article0 04" /></a></div>
-                    <div class="swiper-slide"><a href="a03.html"><img src="../img/art_thum/thumnail_3.png"
-                                alt="article0 03" /></a></div>
-                    <div class="swiper-slide"><a href="a02.html" class="slide_on"><img
-                                src="../img/art_thum/thumnail_2.jpg" alt="thumnail_02" /></a></div>
-                    <div class="swiper-slide"><a href="a01.html"><img src="../img/art_thum/thumnail_1.png"
-                                alt="article0 01" /></a></div>
-                </div>
-                <div class="swiper-scrollbar"></div>
+        <div class="swiper article-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><a href="a01.html"><img src="/asset/img/art_thum/thumnail_1.png"
+                            alt="article 01" /></a></div>
+
+                <div class="swiper-slide selected"><a href="a02.html"><img src="/asset/img/art_thum/thumnail_2.jpg"
+                            alt="article 02" /></a></div>
+                <div class="swiper-slide"><a href="a03.html"><img src="/asset/img/art_thum/thumnail_3.png"
+                            alt="article 03" /></a></div>
+                <div class="swiper-slide"><a href="a04.html"><img src="/asset/img/art_thum/thumnail_4.jpg"
+                            alt="article 04" /></a></div>
+                <div class="swiper-slide"><a href="a05.html"><img src="/asset/img/art_thum/thumnail_5.png"
+                            alt="article 05" /></a></div>
+                <div class="swiper-slide"><a href="a06.html"><img src="/asset/img/art_thum/thumnail_6.jpeg"
+                            alt="article 06" /></a></div>
+
+                <div class="swiper-slide"><a href="a06.html"><img src="/asset/img/art_thum/thumnail_6.jpeg"
+                            alt="article 06" /></a></div>
+                <div class="swiper-slide"><a href="a06.html"><img src="/asset/img/art_thum/thumnail_6.jpeg"
+                            alt="article 06" /></a></div>
+                <div class="swiper-slide"><a href="a06.html"><img src="/asset/img/art_thum/thumnail_6.jpeg"
+                            alt="article 06" /></a></div>
+            </div>
+
+            <div class="swiper-controls">
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar swiper-pagination-progressbar"></div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
+
         <!-- image slide END -->
+
 
         <!-- Article content START-->
         <section class="section-article">
@@ -57,7 +77,7 @@
             <h2>Living in the Dust Age </h2>
             <p class="author">Posted on March 08, 2020 by Tony Cho</p>
             <article>
-                <img src="../img/article_02/art_01.jpg" alt="article02 image1" class="article_head_img">
+                <img src="/asset/img/article_02/art_01.jpg" alt="article02 image1" class="article_head_img">
                 <hr>
                 <p>Overlooking the city of Seoul stands Korea's first comprehensive electric wave tower. Built in 1969,
                     it has become a representative landmark symbolizing Seoul and can be seen on many posters and travel
@@ -75,7 +95,7 @@
                 </p>
 
 
-                <img src="../img/article_02/art_02.jpg" alt="article2 image2" class="article_head_img">
+                <img src="/asser/img/article_02/art_02.jpg" alt="article2 image2" class="article_head_img">
                 <hr>
                 <p> Communicating and measuring air pollution has been the most 'effective' or executable set of
                     policies in Seoul when it comes to managing fine dust situation in Korea. In 2011 the South Korea
@@ -93,7 +113,7 @@
                     again when the size of the built factories are bigger than they were planned.
                 </p>
 
-                <img src="../img/article_02/art_03.PNG" alt="article image" class="article_head_img">
+                <img src="/asset/img/article_02/art_03.PNG" alt="article image" class="article_head_img">
                 <hr>
                 <p> While policies to restrict air pollution from new developments have been slight at best, the
                     government has instead focused its efforts on communicating the quality of air. For example, the
@@ -164,7 +184,7 @@
     </div>
 
     <!-- java script -->
-    <script src="../js/slider.js"></script>
+    <script src="/asset/js/swiper.js"></script>
     <script src="../js/gototop.js"></script>
 </body>
 
