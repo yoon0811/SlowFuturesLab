@@ -2,21 +2,22 @@ const swiper = new Swiper('.swiper', {
 
   direction: "horizontal",
   loop: true,
-  centeredSlides: true,
+  // centeredSlides: true,
   slidesPerView: "auto",
   spaceBetween: 6,
-  pagination: { el: ".swiper-pagination", type: "fraction", clickable: true },
+  pagination: { el: ".swiper-pagination", type: "progressbar", clickable: true },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 
 
+  // 프로그래스 바로 수정하기 
   // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true,
-  },
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  //   draggable: true,
+  // },
 
 });
 

@@ -154,18 +154,36 @@ header.main .top-menu-nav>ul li a {
       30px);
   font-family: var(--font-acsent);
   color: var(--grayscale-g100);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 50%) right;
+  background-size: 200%;
 }
 
 header.main .top-menu-nav>ul li a:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 2px;
+  background-position: left;
+  /* transition: .5s ease-out; */
+  transition: all 0.4s ease-in;
+  color: #FFF;
 }
 
-header.main .top-menu-nav>ul li a:active {
-  background-color: rgba(0, 0, 0, 0.8);
+header.main .top-menu-nav>ul li a::after {
+  content: "";
+  transform: scale(0);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #FFF;
+  transition: transform 0.4s ease-in;
+
 }
 
-
+header.main .top-menu-nav>ul li a:hover::after {
+  transform: scale(100%);
+  transform-origin: left center;
+}
 
 
 /* navigator */
@@ -262,10 +280,10 @@ header .top-menu-nav>ul li a:active {
   transition-duration: 0.3s;
 }
 
-/* .article-swiper .swiper-wrapper .swiper-slide-active {
+.article-swiper .swiper-wrapper .swiper-slide-active {
   opacity: 1;
   filter: grayscale(0);
-} */
+}
 
 .article-swiper .swiper-wrapper .swiper-slide.selected {
   border: 2px solid var(--primary-color);
@@ -328,6 +346,7 @@ header .top-menu-nav>ul li a:active {
   border-radius: 2px;
   padding: 2px;
   background-size: contain;
+  /* background: url(../img/icon_arrow_forward.svg) no-repeat; */
 }
 
 .article-swiper .swiper-controls .swiper-button-next:hover,
@@ -337,11 +356,11 @@ header .top-menu-nav>ul li a:active {
 }
 
 .swiper-controls .swiper-button-prev .swiper-navigation-icon {
-  background: url(/asset/img/icon_arrow_forward.svg) no-repeat;
+  background: url(../img/icon_arrow_forward.svg) no-repeat;
 }
 
 .swiper-controls .swiper-button-next .swiper-navigation-icon {
-  background: url(/asset/img/icon_arrow_forward.svg) 0px 0px no-repeat;
+  background: url(../img/icon_arrow_forward.svg) 0px 0px no-repeat;
 }
 
 
@@ -426,7 +445,7 @@ article>ul>li:last-child {
   align-items: center; */
 
 
-*/ @media (min-width: 500px) {
+/* @media (min-width: 500px) {
   .content {
     width: 43%;
   }
@@ -445,7 +464,7 @@ article>ul>li:last-child {
 .content h3 {
   font-style: italic;
   color: #96a2a7;
-}
+} */
 
 /* 
   .swiper-container {
@@ -516,6 +535,10 @@ article>ul>li:last-child {
   line-height: 1.1em;
 }
 
+
+.masonry-wrapper .my-gallery figcaption {
+  display: none;
+}
 
 /*** About ***/
 
